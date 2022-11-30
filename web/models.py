@@ -1,6 +1,7 @@
 from django.db import models
 
 
-class Uploadfiles(models.Model):
-    file_name = models.CharField(max_length=100)
-    my_files = models.FileField(upload_to="")
+class FileUploads(models.Model):
+    ids = models.AutoField(primary_key=True)
+    file_name = models.CharField(max_length=255)
+    my_file = models.FileField(upload_to='')

@@ -1,11 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
+
+from .forms import FileUploadForm
 
 
 def index(request):
-    context = {}
+    context = {
+        'form': FileUploadForm()
+    }
     return render(request, "index.html", context=context)
-
-
-def send_files(request):
-    if request.method == 'POST':
-        name = request.POST.get()
