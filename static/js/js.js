@@ -1,11 +1,11 @@
-$('#fileup').change(function(){
+$('.uplid').change(function(){
     //here we take the file extension and set an array of valid extensions
-        var res=$('#fileup').val();
+        var res=$('.uplid').val();
         var arr = res.split("\\");
         var filename=arr.slice(-1)[0];
         filextension=filename.split(".");
         filext="."+filextension.slice(-1)[0];
-        valid=[".csv"];
+        valid=[".jpg",".png",".jpeg",".bmp"];
     //if file is not valid we show the error icon, the red alert, and hide the submit button
         if (valid.indexOf(filext.toLowerCase())==-1){
             $( ".imgupload" ).hide("slow");
