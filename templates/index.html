@@ -17,6 +17,7 @@
 			<div class="dropzone">
 				<form action="" method="POST" enctype="multipart/form-data">
 					<img src="http://100dayscss.com/codepen/upload.svg" />
+					<input type="text" name="filename" class="upload-file" placeholder="Enter your file name"/>
 				    <input type="file" multiple name="uploadfiles" class="upload-input" />
 					{% csrf_token %}
 					<button type="submit" class="btn" name="uploadbutton">Upload file</button>
