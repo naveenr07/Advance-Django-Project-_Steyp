@@ -56,38 +56,7 @@ div.dropzone form img {
 	text-align: center;
 
 }
-.one{
-    color: #000;
-}
-.form-group2{
-    position: relative;
-    top: -151px;
-    left: 0;
-    width: 100%;
-    height: 151px;
-    opacity: 0; 
-}
 
-.form-group{
-    position: relative;
-    top: 102px;
-    left: 0px;
-    /* border: 1px solid #db0770; */
-    opacity: 0.4;
-    text-align: center;
-	font-size: 10px; 
-}
-.form-group label{
-    font-size: 14px;
-    font-weight: bold;
-    color: #000;
-}
-
-/* .form-group2 label{
-    font-size: 10px;
-    font-weight: bold;
-    text-align: center;
-} */
 .btn-primary{
     display: inline-block;
     width: 160px;
@@ -103,3 +72,17 @@ div.dropzone form img {
     bottom: 27px;
     left: 153px;
 }
+input#id_file_data{
+    width: 100%;
+}
+
+.dropzone .form-group2 .style input{
+    background: #000;
+    height: 150px;
+}
+
+
+
+
+
+
