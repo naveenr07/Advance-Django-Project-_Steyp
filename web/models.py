@@ -8,3 +8,12 @@ class FileUploads(models.Model):
 
     def __str__(self):
         return self.file_name
+
+
+class Contact(models.Model):
+    name = models.CharField("Enter first name", max_length=50)
+    number = models.IntegerField()
+    email = models.EmailField("Enter Email")
+
+    def __str__(self):
+        return self.name
