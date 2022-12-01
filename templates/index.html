@@ -5,12 +5,16 @@
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 		<link rel="stylesheet" href="{% static 'css/style.css' %}">
-		<title>Drop file to upload</title>
+
+		<title>Hello, world!</title>
 	</head>
 	<body>
 		<div class="maincontainer">
+			<a href="{% url 'web:view' %}" class="button">view uploaded files </a>
 			<div class="container2">
+				
 				<div class="title">
 					<h1>Drop file to upload</h1>
 				</div>
@@ -19,20 +23,24 @@
 						{% csrf_token %}
 						<img src="http://100dayscss.com/codepen/upload.svg" />
 						<div class= "form-group">
-							<label for="{{form.file_name.id_for_label}}">File name</label>
+							<label for="{{form.file_name.id_for_label}}">File name</p></label>
 							{{form.file_name}}
 						</div>
 		
 						<div class= "form-group2">
-							<label for="{{form.files_data.id_for_label}}">Files</label>
-							<div class="style" s>{{form.files_data}}</div>
+							<label for="{{form.files_data.id_for_label}}">( <font color="red">*</font>file extension allowed: <strong>.csv & .xls )</label>
+							{{form.files_data}}
 						</div>
 		
 						<button type="submit" class="btn-primary">Submit</button>
 					</form>
 				</div>
+				
 			</div>
+			
 		</div>
+		
+
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
 		<script src="{% static 'js/script.js' %}"></script>
